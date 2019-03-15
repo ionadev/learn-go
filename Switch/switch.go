@@ -9,6 +9,7 @@ import (
 func main() {
 	basic()
 	weekday()
+	nocond()
 }
 
 func basic() {
@@ -35,5 +36,18 @@ func weekday() {
 		fmt.Println("Day After Tomorrow")
 	default:
 		fmt.Println("Far Away")
+	}
+}
+
+/* No Condition Switch case */
+func nocond() {
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good Morning")
+	case t.Hour() < 17:
+		fmt.Println("Good Afternoon")
+	default:
+		fmt.Println("Good Evening")
 	}
 }
