@@ -18,7 +18,15 @@ func medium() {
 	fmt.Println(v.X)
 }
 
+func pointer() {
+	v := Vertex{1, 3}
+	p := &v
+	p.X = 1e9
+	fmt.Println(v)
+}
+
 func main() {
 	basic()
 	medium()
+	pointer()
 }
