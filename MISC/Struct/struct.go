@@ -8,6 +8,13 @@ type Vertex struct {
 	Y int
 }
 
+var (
+	v1 = Vertex{1, 3}  //Normal
+	v2 = Vertex{X: 4}  // Y is Zero
+	v3 = Vertex{}      // X & Y Is Zero
+	p  = &Vertex{1, 2} // Type *Vertex
+)
+
 func basic() {
 	fmt.Println(Vertex{1, 3})
 }
@@ -25,8 +32,13 @@ func pointer() {
 	fmt.Println(v)
 }
 
+func advpoint() {
+	fmt.Println(v1, p, v2, v3)
+}
+
 func main() {
 	basic()
 	medium()
 	pointer()
+	advpoint()
 }
